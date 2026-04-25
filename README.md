@@ -40,6 +40,11 @@ Plex is very picky about filenames. A library built over years has inconsistent 
 ![Plex](https://img.shields.io/badge/Plex-E5A00D?style=flat&logo=plex&logoColor=white)
 ![TMDB](https://img.shields.io/badge/TMDB-01B4E4?style=flat&logo=themoviedatabase&logoColor=white)
 
+## Related in the AIOS Portfolio
+
+- **[Steam Deck Emulation](https://github.com/mikecutillo/steam-deck-emulation)** — Steam Deck as unattended emulation machine; shares the network-mounted ROM library
+- **[Twin Sync](https://github.com/mikecutillo/twin-sync)** — Mac/PC workflow sync via rsync + shared NAS; another NAS-resident workflow
+
 ---
 
 Part of the AIOS portfolio. See the [profile README](https://github.com/mikecutillo) for the full system map.

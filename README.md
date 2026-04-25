@@ -19,6 +19,28 @@ Plex is very picky about filenames. A library built over years has inconsistent 
 - **Catalogs the library** as a manifest so a future disk failure doesn't lose the organization work
 - **Dry-run first** — every script runs in preview mode before touching files
 
+## Architecture
+
+```mermaid
+graph LR
+    Lib[📚 Messy library · inconsistent names · boxsets · missing years] --> Scan[🔍 Scan + plan]
+    Scan --> Manifest[(📋 Manifest)]
+    Scan --> DryRun{Dry-run preview}
+    DryRun -->|approve| Apply[⚙️ Apply changes]
+
+    Apply --> Rename[🏷️ Rename to Plex format]
+    Apply --> Flatten[📂 Flatten collections]
+    Apply --> Meta[🌐 TMDB backfill]
+    Apply --> Dedupe[🗑️ Duplicate scan]
+
+    Rename --> Clean
+    Flatten --> Clean
+    Meta --> Clean
+    Dedupe --> Clean
+
+    Clean[✨ Plex-clean library] --> Plex[🎬 Plex Media Server]
+```
+
 ## Software
 
 | Layer | Tech |
